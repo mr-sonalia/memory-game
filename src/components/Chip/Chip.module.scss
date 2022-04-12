@@ -1,0 +1,79 @@
+@import "../../scss/colors";
+
+.chip{
+	position: relative;
+}
+
+.fix {
+	// opacity: 0;
+	// visibility: hidden;
+	pointer-events: none;
+}
+
+.label {
+	color: $dark-gray;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	display: block;
+	width: 48px;
+	height: 48px;
+
+	user-select: none;
+	cursor: pointer;
+}
+
+.card {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: all 600ms;
+	transition: all 600ms;
+	z-index: 20;
+}
+
+.card div {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+
+	background: $dark-gray;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	border-radius: 50%;
+
+	display: grid;
+	place-items: center;
+}
+
+.card .back {
+	background: $light-gray-1;
+	color: #fff;
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.input {
+	display: none;
+}
+
+:checked + .card, .active {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+
+.value {
+	font-size: 2rem;
+	color: $dark-gray;
+	text-align: center;
+
+	user-select: none;
+}
+
+.large__values {
+	font-size: 1.4rem;
+}

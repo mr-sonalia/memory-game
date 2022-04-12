@@ -1,0 +1,44 @@
+@import "../../scss/colors";
+
+.button {
+	font-size: 1.8rem;
+	border: none;
+	border-radius: 3rem;
+
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+	&__primary {
+		padding: 1.2rem 4rem;
+
+		color: $white;
+		background-color: $primary;
+
+		&:hover {
+			transform: translateY(-0.4rem);
+		}
+	}
+
+	&__secondary {
+		background-color: $light-gray-1;
+		color: $dark-gray;
+	}
+
+	&__tertiary {
+	}
+
+	&__medium {
+		display: flex;
+
+		padding: 1.2rem;
+
+		width: fit-content;
+		aspect-ratio: 1/1;
+	}
+
+	&:hover {
+		> svg {
+			transition: all 0.4s ease-out;
+			transform: rotateZ(-360deg);
+		}
+	}
+}

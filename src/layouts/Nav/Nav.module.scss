@@ -1,0 +1,33 @@
+@import "../../scss/colors";
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 2rem 6rem;
+
+	&__header {
+		font-size: 3rem;
+		font-weight: 600;
+		color: $dark-gray;
+
+		user-select: none;
+		
+		span {
+			font-size: inherit;
+			font-weight: inherit;
+			color: $primary;
+
+			user-select: inherit;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+
+		list-style-type: none;
+	}
+}
