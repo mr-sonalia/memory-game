@@ -1,0 +1,78 @@
+.chip {
+  position: relative;
+}
+
+.fix {
+  pointer-events: none;
+}
+
+.label {
+  color: #314859;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: block;
+  width: 48px;
+  height: 48px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+}
+
+.card div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #314859;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.card .back {
+  background: #dfe6ec;
+  color: #fff;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.input {
+  display: none;
+}
+
+:checked + .card, .active {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.value {
+  font-size: 2rem;
+  color: #314859;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.large__values {
+  font-size: 1.4rem;
+}
+/*# sourceMappingURL=Chip.module.css.map */

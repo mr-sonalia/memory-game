@@ -1,0 +1,44 @@
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 6rem;
+}
+
+.nav__header {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #314859;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.nav__header span {
+  font-size: inherit;
+  font-weight: inherit;
+  color: #fda31c;
+  -webkit-user-select: inherit;
+     -moz-user-select: inherit;
+      -ms-user-select: inherit;
+          user-select: inherit;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  list-style-type: none;
+}
+/*# sourceMappingURL=Nav.module.css.map */

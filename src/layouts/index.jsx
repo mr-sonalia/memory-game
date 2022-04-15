@@ -1,8 +1,10 @@
 import Nav from "./Nav/Nav";
-import PuzzleBody from "./PuzzleBody/PuzzleBody";
+import Puzzle from "./Puzzle/Puzzle";
+import Tray from "./Tray/Tray";
 
 
 export {
 	Nav,
-	PuzzleBody
+	Puzzle,
+	Tray
 }

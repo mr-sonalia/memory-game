@@ -60,8 +60,11 @@ const gameSlice = createSlice({
 
 		setCanReset: (state, action) => (state.canReset = action.payload),
 
+		// delayFlip: (state, [i1, i2]) => {
+		// 	state.board[i1].visibility = state.board[i2].visibility = false;
+		// },
+
 		updateMatchStack: (state, action) => {
-			state.moves++;
 			const { position, visibility } = action.payload;
 
 			if (state.matchStack.length === 0) {
@@ -74,19 +77,25 @@ const gameSlice = createSlice({
 			}
 
 			if (state.matchStack.length === 1) {
-				if (state.board[position].value === state.matchStack[0].value && state.matchStack[0].position !== position) {
+				if (
+					state.board[position].value === state.matchStack[0].value &&
+					state.matchStack[0].position !== position
+				) {
 					state.board[state.matchStack[0].position].visibility = state.board[
 						position
 					].visibility = true;
 					state.board[state.matchStack[0].position].fix = state.board[
 						position
 					].fix = true;
-				} else {
+				} 
+				else {
+					setTimeout(() => {}, 1000);
 					state.board[state.matchStack[0].position].visibility = state.board[
 						position
 					].visibility = false;
 				}
 				state.matchStack.length = 0;
+				state.moves++;
 
 				return;
 			}
@@ -106,23 +115,26 @@ export const {
 	updateMatchStack,
 } = gameSlice.actions;
 
-export const newGame = size => {
+export const newGame = (size, callback) => {
 	return async dispatch => {
 		try {
 			dispatch(generate(size));
 			dispatch(shuffle());
 			dispatch(createBoard());
+			callback(false);
+			callback(true);
 		} catch (e) {}
 	};
 };
 
 export const resetCurrentGame = () => {
-	try {
-		dispatch(hide());
-		dispatch(shuffle());
-		dispatch(setCanReset(true));
-	} catch (e) {}
-	return async dispatch => {};
+	return async dispatch => {
+		try {
+			dispatch(hide());
+			dispatch(shuffle());
+			dispatch(setCanReset(true));
+		} catch (e) {}
+	};
 };
 
 export default gameSlice.reducer;

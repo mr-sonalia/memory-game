@@ -1,0 +1,35 @@
+.puzzle__body {
+  margin: auto;
+  padding: 3rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .puzzle__body {
+    padding: 3rem 2rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .puzzle__body {
+    padding: 3rem 0.6rem;
+    gap: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .puzzle__body {
+    padding: 3rem 0.6rem;
+    gap: 0.2rem;
+  }
+}
+/*# sourceMappingURL=Puzzle.module.css.map */

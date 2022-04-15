@@ -31,6 +31,10 @@
 
 		padding: 1.2rem;
 
+		width: -webkit-fit-content;
+
+		width: -moz-fit-content;
+
 		width: fit-content;
 		aspect-ratio: 1/1;
 	}
@@ -39,6 +43,14 @@
 		> svg {
 			transition: all 0.4s ease-out;
 			transform: rotateZ(-360deg);
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.button {
+		&__primary {
+			padding: 0.6rem 2rem;
 		}
 	}
 }

@@ -1,11 +1,11 @@
-import classes from "./PuzzleBody.module.scss";
+import classes from "./Puzzle.module.scss";
 import { Chip } from "../../components";
 import { generateID } from "../../helpers";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateBoard, updateMatchStack } from "../../store/gameSlice";
 
-const PuzzleBody = () => {
+const Puzzle = () => {
 	const game = useSelector(state => state.gameReducer);
 	const dispatch = useDispatch();
 
@@ -36,4 +36,4 @@ const PuzzleBody = () => {
 	);
 };
 
-export default PuzzleBody;
+export default Puzzle;

@@ -27,7 +27,7 @@ Nav.Links = ({ newGame, resetCurrentGame }) => {
 				<Button.Secondary.Medium callback={resetCurrentGame} />
 			</li> */}
 			<li className="nav__link">
-				<Button.Primary label={"new game"} callback={newGame} />
+				<Button.Primary label={"New Game"} callback={newGame} />
 			</li>
 		</ul>
 	);
